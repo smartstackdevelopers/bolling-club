@@ -405,59 +405,62 @@ html.lenis.lenis-smooth iframe {
 
 .lookbook {
   min-width: 0;
+  max-width: 100%;
 }
 
 .lookbook-viewport {
   width: 100%;
   min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: max(1.5rem, calc((100% - 1080px) / 2));
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(251, 191, 36, 0.75) transparent;
+  cursor: grab;
+}
+
+.lookbook-viewport.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.lookbook-viewport::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lookbook-viewport::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.75);
 }
 
 .lookbook-track {
   display: flex;
   gap: 1.25rem;
-  padding-inline: max(1.5rem, calc((100% - 1080px) / 2));
   width: max-content;
+  padding-inline: max(1.5rem, calc((100% - 1080px) / 2));
 }
 
 .lookbook-card {
   width: min(78vw, 320px);
   flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
-@media (max-width: 1023px) {
+@media (pointer: coarse), (max-width: 1023px) {
   .lookbook-viewport {
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
+    cursor: auto;
     scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
   }
 
   .lookbook-viewport::-webkit-scrollbar {
     display: none;
   }
-
-  .lookbook-card {
-    scroll-snap-align: start;
-  }
-}
-
-.lookbook-viewport {
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.lookbook-viewport::-webkit-scrollbar {
-  display: none;
-}
-
-.lookbook-card {
-  scroll-snap-align: start;
 }
 
 @media (min-width: 1024px) {
