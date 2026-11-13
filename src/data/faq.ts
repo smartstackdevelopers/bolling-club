@@ -47,6 +47,13 @@ export const faqs: FaqItem[] = [
       "Kids bowling is for children visiting with their families. Include the ages in your message so the team can advise. A published age guide is not listed here.",
   },
   {
+    id: "kids-play-area",
+    topic: "Kids bowling",
+    question: "Is there a play area as well as bowling?",
+    answer:
+      "Yes. Leisure City Bowling Club has an indoor kids play area with slides and a ball pit. Ages, timing and how play fits a bowling visit are confirmed on WhatsApp.",
+  },
+  {
     id: "kids-equipment",
     topic: "Kids bowling",
     question: "Do you have equipment for children?",

@@ -28,6 +28,11 @@ export const mainNav: NavItem[] = [
         description: "A visit shaped around children",
       },
       {
+        label: "Kids play area",
+        href: "/play-area",
+        description: "Indoor slides and a ball pit at the club",
+      },
+      {
         label: "Family Bowling",
         href: "/family-bowling",
         description: "Shared games for the whole group",
@@ -62,6 +67,7 @@ export const footerExplore = [
 export const footerExperience = [
   { label: "Our Experience", href: "/experience" },
   { label: "Kids Bowling", href: "/kids-bowling" },
+  { label: "Kids play area", href: "/play-area" },
   { label: "Family Bowling", href: "/family-bowling" },
   { label: "Birthday Parties", href: "/birthday-parties" },
   { label: "Birthday Packages", href: "/birthday-parties/packages" },
@@ -80,6 +86,7 @@ export function isNavActive(href: string, pathname: string) {
       pathname === "/experience" ||
       pathname.startsWith("/experience/") ||
       pathname === "/kids-bowling" ||
+      pathname === "/play-area" ||
       pathname === "/family-bowling"
     );
   }

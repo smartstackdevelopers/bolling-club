@@ -22,6 +22,16 @@ export const experiences: Experience[] = [
       "Tell Leisure City Bowling Club the ages in your group. Equipment and timing for children are confirmed in the WhatsApp reply.",
   },
   {
+    slug: "play",
+    title: "Kids play area",
+    href: "/play-area",
+    detailHref: "/play-area",
+    image: "/images/hd/club/play-area/indoor-play.jpg",
+    imageAlt: "Indoor kids play area with slides and a ball pit at Leisure City Bowling Club",
+    summary: "An indoor play space at the club, with slides and a ball pit, for younger children visiting with their families.",
+    detail: "How play fits a visit — on its own or with a game — is confirmed by Leisure City Bowling Club on WhatsApp.",
+  },
+  {
     slug: "family",
     title: "Family Bowling",
     href: "/family-bowling",

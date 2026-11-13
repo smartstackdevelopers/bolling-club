@@ -1,4 +1,4 @@
-export const galleryCategories = ["All", "Lanes", "Kids", "Family", "Birthdays"] as const;
+export const galleryCategories = ["All", "Lanes", "Kids", "Play area", "Family", "Birthdays", "Champions"] as const;
 
 export type GalleryCategory = (typeof galleryCategories)[number];
 
@@ -13,6 +13,42 @@ export type GalleryItem = {
 };
 
 export const galleryItems: GalleryItem[] = [
+  {
+    id: "ijaz-champion",
+    title: "Bowling champion",
+    category: "Champions",
+    src: "/images/club/champions/ijaz-champion.jpg",
+    alt: "Portrait of Ijaz Ur Rehman wearing a bowling medal, labelled bowling champion",
+    caption: "Ijaz Ur Rehman, shown as bowling champion.",
+    ratio: "aspect-[3/4]",
+  },
+  {
+    id: "champion-trophy",
+    title: "Trophy",
+    category: "Champions",
+    src: "/images/club/champions/trophy.jpg",
+    alt: "A gold trophy being presented at a bowling event",
+    caption: "A trophy presented at a bowling celebration.",
+    ratio: "aspect-[3/4]",
+  },
+  {
+    id: "champion-shield",
+    title: "Shield",
+    category: "Champions",
+    src: "/images/club/champions/shield.jpg",
+    alt: "A silver shield being presented on stage at a bowling gathering",
+    caption: "A shield presented at a bowling gathering.",
+    ratio: "aspect-[3/4]",
+  },
+  {
+    id: "champion-team",
+    title: "Players",
+    category: "Champions",
+    src: "/images/club/champions/team.jpg",
+    alt: "Four bowlers in Pakistan bowling kit standing together",
+    caption: "Players in Pakistan bowling kit.",
+    ratio: "aspect-[3/4]",
+  },
   {
     id: "lane-screens",
     title: "On the lanes",
@@ -61,7 +97,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "soft-play",
     title: "Kids play area",
-    category: "Kids",
+    category: "Play area",
     src: "/images/hd/club/play-area/soft-play.jpg",
     alt: "Indoor kids play area at Leisure City Bowling Club",
     caption: "A play area for younger children at the club.",
@@ -97,7 +133,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "toddler-area",
     title: "For little ones",
-    category: "Kids",
+    category: "Play area",
     src: "/images/hd/club/play-area/toddler-area.jpg",
     alt: "Toddler ball-pit area at Leisure City Bowling Club",
     caption: "Space for little ones while the game is on.",
@@ -111,6 +147,24 @@ export const galleryItems: GalleryItem[] = [
     alt: "A group photo at Leisure City Bowling Club",
     caption: "Parents, children and relatives on one visit.",
     ratio: "aspect-[4/3]",
+  },
+  {
+    id: "indoor-play",
+    title: "Slides and a ball pit",
+    category: "Play area",
+    src: "/images/hd/club/play-area/indoor-play.jpg",
+    alt: "Indoor play structure with slides and a ball pit at Leisure City Bowling Club",
+    caption: "The kids play area at the club.",
+    ratio: "aspect-[4/3]",
+  },
+  {
+    id: "ball-pit",
+    title: "Ball pit",
+    category: "Play area",
+    src: "/images/hd/club/play-area/ball-pit.jpg",
+    alt: "Colourful ball pit in the kids play area at Leisure City Bowling Club",
+    caption: "The ball pit under the play structure.",
+    ratio: "aspect-square",
   },
   {
     id: "winners",

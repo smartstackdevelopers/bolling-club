@@ -13,8 +13,8 @@ export default function ExperiencePage() {
     <>
       <PageHero
         eyebrow="Our experience"
-        title="Three reasons to take a lane"
-        description="Kids bowling, family bowling and birthday gatherings share one club and one way to book. The difference is who you are bringing and what you want the hour to feel like."
+        title="More than one way to visit"
+        description="Kids bowling, an indoor play area, family bowling and birthday gatherings share one club and one way to book."
         image="/images/experience.jpg"
         imageAlt="Players on the lanes at Leisure City Bowling Club"
         items={[{ label: "Experience" }]}
@@ -43,9 +43,11 @@ export default function ExperiencePage() {
                   <Link href={experience.href} className="btn btn-primary">
                     View details
                   </Link>
-                  <Link href={experience.detailHref} className="btn btn-secondary">
-                    Planning guide
-                  </Link>
+                  {experience.detailHref !== experience.href ? (
+                    <Link href={experience.detailHref} className="btn btn-secondary">
+                      Planning guide
+                    </Link>
+                  ) : null}
                 </div>
               </Reveal>
             </div>

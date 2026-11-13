@@ -16,13 +16,13 @@ import { Magnetic } from "@/components/ui/Magnetic";
 import { WhatsAppAnchor } from "@/components/ui/WhatsAppAnchor";
 import { experiences, reasons } from "@/data/content";
 import { faqs } from "@/data/faq";
-import { birthdaySlides, clubGallerySlides } from "@/data/photos";
+import { birthdaySlides, championSlides, clubGallerySlides, playAreaSlides } from "@/data/photos";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata("/");
 
 const reasonIcons = [Users, Smile, Heart, Sparkles];
-const ticker = ["Jinnah Park", "Kids bowling", "Family bowling", "Birthday gatherings", "WhatsApp booking"];
+const ticker = ["Jinnah Park", "Kids bowling", "Kids play area", "Family bowling", "Birthday gatherings", "WhatsApp booking"];
 
 export default function HomePage() {
   return (
@@ -37,7 +37,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <p className="sr-only">Jinnah Park. Kids bowling. Family bowling. Birthday gatherings. WhatsApp booking.</p>
+      <p className="sr-only">Jinnah Park. Kids bowling. Kids play area. Family bowling. Birthday gatherings. WhatsApp booking.</p>
 
       <section className="section">
         <div className="container-page grid min-w-0 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
@@ -93,10 +93,10 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Choose a lane"
               title="Our experiences"
-              description="Three ways to spend time at Leisure City Bowling Club. Each one ends with a WhatsApp request, not an automatic reservation."
+              description="Bowling, an indoor kids play area and birthday gatherings at Leisure City Bowling Club. Each one ends with a WhatsApp request, not an automatic reservation."
             />
           </Reveal>
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             {experiences.map((experience, index) => (
               <Reveal key={experience.slug} delay={index * 0.06}>
                 <TiltCard>
@@ -120,6 +120,38 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section pt-0">
+        <div className="container-page grid items-center gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Kids play area"
+              title="Indoor play beside the lanes"
+              description="Leisure City Bowling Club is not only bowling. Younger children have an indoor play area at the club, with slides and a ball pit."
+            />
+            <p className="mt-4 leading-7 text-muted">
+              The play space is inside the same club in Jinnah Park. Ages, timing and whether play is booked with a game are confirmed on WhatsApp.
+            </p>
+            <div className="mt-8">
+              <Button href="/play-area">See the play area</Button>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {playAreaSlides.slice(0, 2).map((slide) => (
+                <ArtFrame
+                  key={slide.src}
+                  src={slide.src}
+                  alt={slide.alt}
+                  caption={slide.caption}
+                  ratio="aspect-[4/5]"
+                  sizes="(min-width: 1024px) 280px, 50vw"
+                />
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -172,6 +204,30 @@ export default function HomePage() {
               <Button href="/birthday-parties/book">Party enquiry</Button>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section pt-0">
+        <div className="container-page">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Champions"
+              title="Bowling celebrations"
+              description="Photographs shared for Leisure City Bowling Club: a champion portrait, a trophy, a shield, and players in Pakistan bowling kit."
+            />
+          </Reveal>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {championSlides.map((slide) => (
+              <ArtFrame
+                key={slide.src}
+                src={slide.src}
+                alt={slide.alt}
+                caption={slide.caption}
+                ratio="aspect-[3/4]"
+                sizes="(min-width: 1024px) 240px, 50vw"
+              />
+            ))}
+          </div>
         </div>
       </section>
 

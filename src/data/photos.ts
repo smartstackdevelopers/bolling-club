@@ -60,6 +60,52 @@ export const familySlides: PhotoSlide[] = [
   },
 ];
 
+export const championSlides: PhotoSlide[] = [
+  {
+    src: "/images/club/champions/ijaz-champion.jpg",
+    alt: "Portrait of Ijaz Ur Rehman wearing a bowling medal, labelled bowling champion",
+    caption: "Ijaz Ur Rehman, shown as bowling champion.",
+  },
+  {
+    src: "/images/club/champions/trophy.jpg",
+    alt: "A gold trophy being presented at a bowling event",
+    caption: "A trophy presented at a bowling celebration.",
+  },
+  {
+    src: "/images/club/champions/shield.jpg",
+    alt: "A silver shield being presented on stage at a bowling gathering",
+    caption: "A shield presented at a bowling gathering.",
+  },
+  {
+    src: "/images/club/champions/team.jpg",
+    alt: "Four bowlers in Pakistan bowling kit standing together",
+    caption: "Players in Pakistan bowling kit.",
+  },
+];
+
+export const playAreaSlides: PhotoSlide[] = [
+  {
+    src: "/images/hd/club/play-area/indoor-play.jpg",
+    alt: "Indoor kids play structure with slides and a ball pit at Leisure City Bowling Club",
+    caption: "Slides and a ball pit inside the kids play area.",
+  },
+  {
+    src: "/images/hd/club/play-area/soft-play.jpg",
+    alt: "Colourful indoor soft-play structure at Leisure City Bowling Club",
+    caption: "Soft play beside the bowling club.",
+  },
+  {
+    src: "/images/hd/club/play-area/ball-pit.jpg",
+    alt: "Ball pit at the kids play area in Leisure City Bowling Club",
+    caption: "The ball pit at the foot of the play structure.",
+  },
+  {
+    src: "/images/hd/club/play-area/toddler-area.jpg",
+    alt: "Toddler area of the indoor play space at Leisure City Bowling Club",
+    caption: "A corner of the play area for little ones.",
+  },
+];
+
 export const kidsSlides: PhotoSlide[] = [
   {
     src: "/images/hd/club/bowling/child.jpg",

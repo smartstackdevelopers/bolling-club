@@ -11,7 +11,7 @@ export const metadata = createPageMetadata("/kids-bowling");
 const moments = [
   { title: "A first roll", text: "Some children are here to try bowling for the first time. Say so in the enquiry so the club can prepare the reply." },
   { title: "A grown-up nearby", text: "Kids visits are planned with adults in the group. Add both counts when you write to Leisure City Bowling Club." },
-  { title: "A calmer kind of fun", text: "There is a kids play area at the club. Bumper rails, ball weights and shoes are confirmed in the WhatsApp reply." },
+  { title: "A calmer kind of fun", text: "There is an indoor kids play area at the club, with slides and a ball pit. Bumper rails, ball weights and shoes are confirmed in the WhatsApp reply." },
 ];
 
 export default function KidsBowlingPage() {
@@ -52,6 +52,11 @@ export default function KidsBowlingPage() {
                   <p className="mt-2 text-sm leading-6 text-muted">{moment.text}</p>
                 </article>
               ))}
+            </div>
+            <div className="mt-6">
+              <Link href="/play-area" className="btn btn-secondary">
+                See the play area
+              </Link>
             </div>
           </div>
         </div>

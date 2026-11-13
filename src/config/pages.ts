@@ -44,6 +44,14 @@ export const pages: PageMeta[] = [
     priority: 0.8,
   },
   {
+    path: "/play-area",
+    title: "Kids Play Area",
+    description:
+      "The indoor kids play area at Leisure City Bowling Club in Jinnah Park, with slides and a ball pit. Ask on WhatsApp how a play visit is arranged.",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
     path: "/family-bowling",
     title: "Family Bowling in Rawalpindi",
     description:
